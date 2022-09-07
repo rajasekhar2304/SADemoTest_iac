@@ -9,7 +9,7 @@ pipeline {
                 dir("SAtest_iac") {
                     git branch: 'master',
                     credentialsId: "RajaGithubAccess",
-                    url: 'https://github.com/rajasekhar2304/SAtest_iac.git'
+                    url: 'https://github.com/rajasekhar2304/SADemoTest_iac.git'
                 }
             }  
         }             
