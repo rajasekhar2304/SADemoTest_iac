@@ -6,7 +6,7 @@ pipeline {
                 git branch: 'master',
                     credentialsId: "RajaGithubAccess",            
                     url: 'https://github.com/rajasekhar2304/my-react-app.git'
-                dir("SAtest_iac") {
+                dir("SADemoTest_iac") {
                     git branch: 'master',
                     credentialsId: "RajaGithubAccess",
                     url: 'https://github.com/rajasekhar2304/SADemoTest_iac.git'
@@ -25,9 +25,9 @@ pipeline {
                     credentialsId: 'JENKINS_APP_SERVER',
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
-                    inventory: 'SAtest_iac/inventories/dev.inv', 
+                    inventory: 'SADemoTest_iac/inventories/dev.inv', 
                     limit: 'jenkinsServer', 
-                    playbook: 'SAtest_iac/appDeploy.yml',
+                    playbook: 'SADemoTest_iac/appDeploy.yml',
                     tags: 'copy_files'
             }
         }
@@ -37,9 +37,9 @@ pipeline {
                     credentialsId: 'JENKINS_APP_SERVER',
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
-                    inventory: 'SAtest_iac/inventories/dev.inv', 
+                    inventory: 'SADemoTest_iac/inventories/dev.inv', 
                     limit: 'jenkinsServer', 
-                    playbook: 'SAtest_iac/appDeploy.yml',
+                    playbook: 'SADemoTest_iac/appDeploy.yml',
                     tags: 'npm_start'                
             }
         }
