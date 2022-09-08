@@ -4,10 +4,10 @@ import sys
 from time import strftime, sleep
 import boto3
 from botocore.exceptions import ClientError
-
+APPLICATION_NAME = "HOME"
 VERSION_LABEL = strftime("%Y%m%d%H%M%S")
-BUCKET_KEY = os.getenv('APPLICATION_NAME') + '/' + VERSION_LABEL + \
-    '-bitbucket_builds.zip'
+BUCKET_KEY = "os.getenv('APPLICATION_NAME') + '/' + VERSION_LABEL + \
+    '-bitbucket_builds.zip'"
 
 def upload_to_s3(artifact):
     """
@@ -94,7 +94,7 @@ def deploy_new_version():
 
 def main():
     " Your favorite wrapper's favorite wrapper "
-    if not upload_to_s3('/tmp/artifact.zip'):
+    if not upload_to_s3('/tmp/artifacts.zip'):
         sys.exit(1)
     if not create_new_version():
         sys.exit(1)
