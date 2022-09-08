@@ -1,5 +1,5 @@
 - name: eb appversion
   become_user: root
-  shell: cd "{{ dest_dir }}" | /home/dradmin/.ebcli-virtual-env/executables/eb use Testapp-env | /home/dradmin/.ebcli-virtual-env/executables/eb deploy
+  shell: cd "{{ dest_dir }}" | /home/dradmin/.ebcli-virtual-env/executables/eb deploy Testapp-env
   tags:
    - eb_deploy
