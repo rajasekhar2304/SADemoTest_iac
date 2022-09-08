@@ -12,3 +12,6 @@
    - role: ebdeploy
      tags:
       - eb_deploy
+   - role: delete
+     tags:
+      - delete_files
