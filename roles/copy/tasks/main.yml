@@ -3,12 +3,11 @@
     src: "{{ src_dir }}"
     dest: "{{ dest_dir }}"
     rsync_opts:
-        - "--exclude=node_modules"
+        # - "--exclude=node_modules"
         - "--exclude=SADemoTest_iac"
         - "--exclude=.git"
         - "--exclude=.gitignore"
         - "--exclude=README.md"
         - "--exclude=SADemoTest_iac@tmp"
-        - "--exclude=ssh*"
   tags:
     - copy_files
