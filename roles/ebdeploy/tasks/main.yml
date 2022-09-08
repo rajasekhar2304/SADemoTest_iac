@@ -1,5 +1,5 @@
 - name: eb appversion
   become_user: root
-  shell: cd "{{ dest_dir }}" | eb list
+  shell: cd "{{ dest_dir }}" | /home/dradmin/.ebcli-virtual-env/executables/eb list
   tags:
    - eb_deploy
