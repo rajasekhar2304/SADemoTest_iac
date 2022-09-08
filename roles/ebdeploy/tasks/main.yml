@@ -1,5 +1,5 @@
 - name: eb appversion
   become: true
-  shell: cd "{{ dest_dir }}" | eb deploy
+  shell: cd "{{ dest_dir }}" | ls -la
   tags:
    - eb_deploy
