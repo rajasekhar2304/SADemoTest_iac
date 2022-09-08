@@ -1,2 +1,2 @@
 src_dir: "/var/lib/jenkins/workspace/raja/SADemoTest_iac/"
-dest_dir: "/home/dradmin/raja/SADemo/" 
+dest_dir: "/home/dradmin/raja/SADemo" 

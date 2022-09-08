@@ -1,5 +1,6 @@
 - name: eb appversion
   become: true
-  shell: cd "{{ dest_dir }}" | ls -la
+  become_user: sudo
+  shell: cd "{{ dest_dir }}" | eb list
   tags:
    - eb_deploy
