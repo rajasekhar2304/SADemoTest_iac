@@ -2,5 +2,11 @@
   become_user: root
   shell: sh {{ iac_dest_dir }}/scripts/ebdeploy.sh
   # shell: sh /home/dradmin/raja/scripts/ebshellscript.sh #cd "{{ dest_dir }}"/scripts/ebshellscript.sh | /home/dradmin/.ebcli-virtual-env/executables/eb list
+  register: appv_output
   tags:
-   - eb_deploy
+   - ebdeploy
+- set_fact: 
+      ver_no: "{{ appv_output.stdout | regex_search('app-\\d{6}_\\d{12}')}}"
+- debug:
+      var: ver_no    
+      msg: "{{ appv_output.stdout_lines }}"
