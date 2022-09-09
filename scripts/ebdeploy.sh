@@ -1,2 +1,2 @@
 cd /home/dradmin/raja/SADemo
-/home/dradmin/.ebcli-virtual-env/executables/eb deploy
+/home/dradmin/.ebcli-virtual-env/executables/eb deploy Devapp-env
