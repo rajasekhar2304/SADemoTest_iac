@@ -1,6 +1,6 @@
 - name: eb appversion
   become_user: root
-  shell: sh {{ iac_dest_dir }}/ebdeploy.sh
+  shell: sh {{ iac_dest_dir }}/scripts/ebdeploy.sh
   # shell: sh /home/dradmin/raja/scripts/ebshellscript.sh #cd "{{ dest_dir }}"/scripts/ebshellscript.sh | /home/dradmin/.ebcli-virtual-env/executables/eb list
   tags:
    - eb_deploy
