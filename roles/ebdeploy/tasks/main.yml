@@ -1,6 +1,7 @@
 - name: eb appversion
   become_user: root
-  shell: sh {{ iac_dest_dir }}/scripts/ebdeploy.sh
+  shell: "chdir={{ dest_dir }} | /home/dradmin/.ebcli-virtual-env/executables/eb deploy" 
+  # shell: sh {{ iac_dest_dir }}/scripts/ebdeploy.sh
   # shell: sh /home/dradmin/raja/scripts/ebshellscript.sh #cd "{{ dest_dir }}"/scripts/ebshellscript.sh | /home/dradmin/.ebcli-virtual-env/executables/eb list
   register: appv_output
   tags:
