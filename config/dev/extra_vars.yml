@@ -1,2 +1,4 @@
 src_dir: "/var/lib/jenkins/workspace/raja/SADemoTest_iac/"
 dest_dir: "/home/dradmin/raja/SADemo" 
+iac_src_dir: "/var/lib/jenkins/workspace/raja/SADemoTest_iac/SADemoTest_iac/scripts"
+iac_dest_dir: "/opt/cicd_wrappers/files"
